@@ -8,14 +8,11 @@ module.exports = function (sequelize, DataTypes) {
             validate: {
                 len: [1]
             }
-
         },
-
+      
         content: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-            len: [1]
-
+            type: DataTypes.STRING,
+            allowNull: false
         },
 
         skillList: {
@@ -26,11 +23,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER
         }
 
-
     });
 
+    
     // Relational setup between posts and clients
-    Post.associate = function (models) {
+    Post.associate = function(models) {
         Post.belongsTo(models.Client, {
             foreignKey: {
                 allowNull: false

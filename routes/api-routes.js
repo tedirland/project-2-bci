@@ -16,7 +16,8 @@ module.exports = function (app) {
   });
 
   //This will be the route to create a new client in the db
-  app.post("/api/clients", function (req, res) {
+
+  app.post("/api/clientsignup", function (req, res) {
     db.Client.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -76,6 +77,10 @@ module.exports = function (app) {
       res.status(401).json(err);
     });
 });
+
+db.Client.findAll({
+   id: req.params.id 
+ })
  
   });
 };

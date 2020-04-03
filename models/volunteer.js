@@ -123,11 +123,12 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
 
     }
-   
-
-
+  
     // The password cannot be null
-    
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   });
   // Creating a custom method for our Volunteer model. This will check if an unhashed password entered by the Volunteer can be compared to the hashed password stored in our database
 
