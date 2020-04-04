@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Sign Up</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
@@ -21,7 +21,7 @@
   
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-6 col-md-offset-3 col-sm-2">
         <h2>Sign Up Form</h2>
         <form class="signup"> 
           
@@ -38,26 +38,64 @@
           <div class="form-group">
                 <label for="selectType">Type</label>
                <br>
-                <input type="radio" id="volunteer" name="userType" value="volunteer">
-                <label for="volunteer">Volunteer</label><br>
+                
+               <input type="radio" id="volunteer" name="userType" value="volunteer">
+                <label for="volunteer"> Volunteer</label><br>
                 <input type="radio" id="member" name="userType" value="member">
-                <label for="member">Member</label><br>
+                <label for="member"> Member</label><br>
           </div>
 
           <div class="form-group">
             <label for="userSkills">Skills</label>
             <br>
-            <input type="checkbox" id="skill1" name="skill1" value="Law">
-            <label for="skill1"> Law</label><br>
+            
+            <input type="checkbox" id="skills1" name="skills1" value="skillsAccounting">
+            <label for="skills1"> Accounting</label><br>
 
-            <input type="checkbox" id="skill2" name="skill2" value="Web Design">
-            <label for="skill2"> Web Design</label><br>
+            <input type="checkbox" id="skill2" name="skill2" value="skillsEngineering">
+            <label for="skill2"> Engineering</label><br>
 
-            <input type="checkbox" id="skill3" name="skill3" value="Photography">
-            <label for="skill3"> Photography</label>
-            <br>
-            <input type="checkbox" id="skill4" name="skill4" value="Other">
-            <label for="skill4"> <input type="text" class="form-control" id="fname-input" placeholder="Other"></label>
+            <input type="checkbox" id="skill3" name="skill3" value="skillsEventPlanning">
+            <label for="skill3"> Event Planning</label><br>
+
+            <input type="checkbox" id="skill4" name="skill4" value="skillsGraphicDesign">
+            <label for="skill4"> Graphic Design</label><br>
+
+            <input type="checkbox" id="skill5" name="skill5" value="skillsPhotography">
+            <label for="skill5"> Photography</label><br>
+
+            <input type="checkbox" id="skill6" name="skill6" value="skillsProjectManagement">
+            <label for="skill6"> Project Management</label><br>
+            
+            <input type="checkbox" id="skill7" name="skill7" value="skillsWebDevelopment">
+            <label for="skill7"> Web Development</label><br>
+
+            <input type="checkbox" id="skill8" name="skill8" value="skillsWriting">
+            <label for="skill8"> Writing</label><br>
+
+            <input type="checkbox" id="skill9" name="skill9" value="skillsGroceryPickup">
+            <label for="skill9"> Grocery Pickup</label><br>
+            
+            <input type="checkbox" id="skill10" name="skill10" value="skillsHomeHealthcare">
+            <label for="skill10"> Home Healthcare</label><br>
+
+            <input type="checkbox" id="skill11" name="skill11" value="skillsFurnitureRemovalMoving">
+            <label for="skill11"> Furniture Removal and Moving</label><br>
+
+            <input type="checkbox" id="skill12" name="skill12" value="skillsLandscaping">
+            <label for="skill12"> Landscaping</label><br>
+
+            <input type="checkbox" id="skill13" name="skill13" value="skillsPlumbing">
+            <label for="skill13"> Plumbing</label><br>
+
+            <input type="checkbox" id="skill14" name="skill14" value="skillsGeneralRepair">
+            <label for="skill14"> General Repair</label><br>
+
+            <input type="checkbox" id="skill15" name="skill15" value="skillsTransportation">
+            <label for="skill15"> Transportation</label><br>
+
+            <input type="checkbox" id="skill" name="skill" value="">
+            <label for="skill"> <input type="text" class="form-control" id="other-skill" placeholder="Other"></label>
           </div>
 
           <div class="form-group">
@@ -67,6 +105,11 @@
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          
+          <div class="form-group">
+          <input type="checkbox" id="terms" name="terms" value="Photography">
+            <label for="terms">I accept the  <a href="terms.html">Terms of Use</a></label>
           </div>
 
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">

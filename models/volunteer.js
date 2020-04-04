@@ -122,7 +122,7 @@ module.exports = function(sequelize, DataTypes) {
     skillsTransportation: {
       type: DataTypes.BOOLEAN,
 
-    }
+    },
   
     // The password cannot be null
     category: {

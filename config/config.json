@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": "Pistons381!",
-    "database": "twoHands_db",
-    "host": "127.0.0.1",
+    "username": "gck1bw8cy3hbksf2",
+    "password": "p5h5w75wnfekmum2",
+    "database": "yrk9sqy9dq46rnls",
+    "host": "ofcmikjy9x4lroa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "gck1bw8cy3hbksf2",
+    "password": "p5h5w75wnfekmum2",
+    "database": "yrk9sqy9dq46rnls",
+    "host": "ofcmikjy9x4lroa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "gck1bw8cy3hbksf2",
+    "password": "p5h5w75wnfekmum2",
+    "database": "yrk9sqy9dq46rnls",
+    "host": "ofcmikjy9x4lroa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
