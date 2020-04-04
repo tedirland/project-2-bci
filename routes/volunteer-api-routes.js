@@ -22,9 +22,38 @@ module.exports = function(app) {
   });
 
   app.post("/api/volunteers", function(req, res) {
-    // Create an Volunteer with the data available to us in req.body
-    console.log(req.body);
-    db.Volunteer.create(req.body).then(function(dbVolunteer) {
+    // Updated Volunteer routes with shell names for form fields
+    db.Volunteer.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      bio: req.body.bio,
+      location: req.body.location,
+      linkedIn: req.body.linkedIn,
+      facebook: req.body.facebook,
+      website: req.body.website,
+      employer: req.body.employer,
+      twitter: req.body.twitter,
+      password: req.body.password,
+      skillsAccounting: req.body.skillsAccounting,
+      skillsEngineering: req.body.skillsEngineering,
+      skillsEventPlanning: req.body.skillsEventPlanning,
+      skillsGraphicDesign: req.body.skillsGraphicDesign,
+      skillsPhotography: req.body.skillsPhotography,
+      skillsProjectManagement: req.body.skillsProjectManagement,
+      skillsWebDevelopment: req.body.skillsWebDevelopment,
+      skillsWriting: req.body.skillsWriting,
+      skillsGroceryPickup: req.body.skillsGroceryPickup,
+      skillsHomeHealthcare: req.body.skillsHomeHealthcare,
+      skillsFurnitureMoving: req.body,skillsFurnitureMoving,
+      skillsLandscaping: req.body.skillsLandscaping,
+      skillsPlumbing: req.body.skillsPlumbing,
+      skillsGeneralRepair: req.body.skillsGeneralRepair,
+      skillsTransportation: req.body.skillsTransportation
+
+
+    })
+    .then(function(dbVolunteer) {
       res.json(dbVolunteer);
     });
   });
