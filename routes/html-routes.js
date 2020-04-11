@@ -38,7 +38,11 @@ module.exports = function (app) {
   });
 
   app.get("/posts", function (req, res) {
-    db.Post.findAll().then(function(data){
+    db.Post.findAll({
+      order: [
+        ['createdAt', 'DESC']
+      ]
+    }).then(function(data){
       console.log(data)
         res.render("post", {posts: data});
         console.log("This is working")
