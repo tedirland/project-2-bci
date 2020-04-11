@@ -73,7 +73,7 @@ module.exports = function (app) {
     });
    
   });
-  app.get("/myPosts", function (req, res) {
+  app.get("/myproj", function (req, res) {
   db.Post.findAll({
     where: {
       clientID: 34
@@ -86,15 +86,15 @@ module.exports = function (app) {
     });
    
   });
-  app.get("/myProjects", function (req, res) {
+  app.get("/myposts", function (req, res) {
   db.Post.findAll({
     where: {
-      volunteerID: 12
+      volunteerID: 34
     }
   }).then(function(data){
     console.log(data)
-      res.render("myproj", {posts: data});
-      console.log("This is working")
+      res.render("myposts", {posts: data});
+    
   
     });
    
