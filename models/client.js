@@ -129,6 +129,10 @@ module.exports = function(sequelize, DataTypes) {
 
   });
 
+  Client.prototype.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+  };
+
 // Relational setup between Client and Post models
   Client.associate =  function(models) {
     Client.hasMany(models.Post, {

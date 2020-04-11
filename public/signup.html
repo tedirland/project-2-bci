@@ -7,174 +7,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
+ <style> 
+      #skills-list{
+        display: none;
+      }
+ </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
-    </div>
+  <nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+      <li><a href="login.html">TwoHands</a></li>
+    </ul>
   </nav>
   
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 col-sm-2">
-        <!-- add asterisk to areas that are mandatory -->
+      <div class="col-md-10 col-md-offset-1 col-sm-2">
         <h2>Sign Up Form</h2>
         <!-- fix spacing here  -->
-        <form class="signup"> 
-            <!-- have Type volunteer member all on same line -->
-            <div class="form-group">
-              <label for="type">Type</label>
-             <br>
-             <input type="radio" id="radioVolunteer" name ="selectType" value="false">
-              <label for="radioVolunteer"> Volunteer</label><br>
-              <input type="radio" id="radioMember" name ="selectType" value="false">
-              <label for="radioMember"> Member</label><br>
+        <form class="signup">             
+          <div class="form-group col-md-12">
+            <label for="type" class="col-sm-2">Type<span>&#42;</span></label>
+
+            <div class="col-md-offset-1 col-md-4 col-sm-2">
+                    <input type="radio" id="radioVolunteer" name ="selectType" value="volunteer">
+                    <label for="radioVolunteer">  Volunteer</label>
+            </div>
+                    <input type="radio" id="radioMember" name ="selectType" value="member">
+                    <label for="radioMember">  Member</label><br>
+          </div>
+
+          <div class="form-group">
+        <label for="exampleInputFName1">First Name<span>&#42;</span></label>
+          <input type="text" class="form-control" id="firstName" placeholder="First Name">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputLName1">Last Name<span>&#42;</span></label>
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+          </div>
+
+        
+          <div class="form-group">
+            <label for="bio" id ="bioLabel">Bio<span>&#42;</span></label>
+            <input type="text" class="form-control" id="bio" name="biobox" placeholder="Bio">
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location<span>&#42;</span></label>
+          <br>	
+          <select class="col-md-3" id="location">
+            <option value="North">North</option>
+            <option value="South">South</option>
+            <option value="West">West</option>
+            <option value="East">East</option>
+            <option value="Other">Other</option>
+          </select>
+          <br>
+        </div>
+
+        <div class="form-group">
+           <label for="linkedIn">LinkedIn</label>
+           <input type="text" class="form-control" id="linkedIn" name="linkedInbox" placeholder="LinkedIn">
+        </div>  
+        <div class="form-group">
+          <label for="facebook">Facebook</label>
+          <input type="text" class="form-control" id="facebook" name="facebookbox" placeholder="Facebook">
+        </div>
+        <div class="form-group">
+          <label for="twitter">Twitter</label>
+          <input type="text" class="form-control" id="twitter" name="twitterbox" placeholder="Twitter">
+        </div>
+        <div class="form-group">
+          <label for="website">Personal Website</label>
+          <input type="text" class="form-control" id="website" name="websitebox" placeholder="Website">
+        </div>
+        <div class="form-group">
+          <label for="employer">Employer</label>
+          <input type="text" class="form-control" id="employer" name="employerbox" placeholder="Employer">
         </div>
         
+        <div class="form-group" id="skills-list">
+          <!-- do we need to add class="form-control" to all inputs? -->
+          <!-- Make bio box height bigger -->
+
+          <label for="userSkills" id="userSkillsLabel">Skills to Volunteer</label>
+          <br>
+
+          <div class="col-sm-3 col-md-3">
+          <input type="checkbox" id="skillsAccounting">
+          <label for="skillsAccounting"> Accounting</label><br>
+
+          <input type="checkbox" id="skillsEngineering">
+          <label for="skill2"> Engineering</label><br>
+
+          <input type="checkbox" id="skillsEventPlanning">
+          <label for="skill3"> Event Planning</label><br>
+
+          <input type="checkbox" id="skillsGraphicDesign" name="skillsGraphicDesign">
+          <label for="skillsGraphicDesign"> Graphic Design</label><br>
+
+          <input type="checkbox" id="skillsPhotography" name="skillsPhotography" value="skillsPhotography">
+          <label for="skillsPhotography"> Photography</label><br>
+          </div>
+          
+          <div class="col-sm-3 col-md-4">
+          <input type="checkbox" id="skillsProjectManagement" name="skillsProjectManagement" value="skillsProjectManagement">
+          <label for="skillsProjectManagement"> Project Management</label><br>
+          
+          <input type="checkbox" id="skillsWebDevelopment" name="skillsWebDevelopment" value="skillsWebDevelopment">
+          <label for="skillsWebDevelopment"> Web Development</label><br>
+          
+          <input type="checkbox" id="skillsWriting" name="skillsWriting" value="skillsWriting">
+          <label for="skillsWriting"> Writing</label><br>
+
+          <input type="checkbox" id="skillsGroceryPickup" name="skillsGroceryPickup" value="skillsGroceryPickup">
+          <label for="skillsGroceryPickup"> Grocery Pickup</label><br>
+          
+          <input type="checkbox" id="skillsHomeHealthcare" name="skillsHomeHealthcare" value="skillsHomeHealthcare">
+          <label for="skillsHomeHealthcare"> Home Healthcare</label><br>
+          </div>
+          
+          <div class="col-sm-3 col-md-5">
+          <input type="checkbox" id="skillsFurnitureMoving" name="skillsFurnitureMoving" value="skillsFurnitureMoving">
+          <label for="skillsFurnitureMoving"> Furniture Removal and Moving</label><br>
+
+          <input type="checkbox" id="skillsLandscaping" name="skillsLandscaping" value="skillsLandscaping">
+          <label for="skillsLandscaping"> Landscaping</label><br>
+
+          <input type="checkbox" id="skillsPlumbing" name="skillsPlumbing" value="skillsPlumbing">
+          <label for="skillsPlumbing"> Plumbing</label><br>
+
+          <input type="checkbox" id="skillsGeneralRepair" name="skillsGeneralRepair" value="skillsGeneralRepair">
+          <label for="skillsGeneralRepair"> General Repair</label><br>
+
+          <input type="checkbox" id="skillsTransportation" name="skillsTransportation" value="skillsTransportation">
+          <label for="skillsTransportation"> Transportation</label><br><br>
+          </div>
+
+          <!-- future direction -->
+          <!-- <input type="checkbox" id="skill" name="skill" value="">
+          <label for="skill"> <input type="text" class="form-control" id="other-skill" placeholder="Other"></label> -->
+        </div>
         <div class="form-group">
-          <label for="exampleInputFName1">First Name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="First Name">
-          </div>
+          <label for="exampleInputEmail1">Email Address<span>&#42;</span></label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password<span>&#42;</span></label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+        <input type="checkbox" id="termsofuse" name="termsofuse" value="accepted">
+          <label for="termsofuse">I accept the  <a target=”_blank” href="terms.html">Terms of Use</a><span>&#42;</span></label>
+        </div>
+        <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span> <span class="msg"></span>
+        </div>
+        <button type="submit" class="btn btn-default">Sign Up</button>
+      </form>
 
-          <div class="form-group">
-            <label for="exampleInputLName1">Last Name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-            </div>
+      <br />
+      <p>Or log in <a href="login.html">here</a></p>
 
-          
-            <div class="form-group">
-              <label for="bio">Bio</label>
-              <input type="text" class="form-control" id="bio" name="biobox" placeholder="Bio">
-          </div>
-
-          <div class="form-group">
-            <label for="location">Location:</label>
-            <br>	
-            <select id="location">
-              <option value="North">North</option>
-              <option value="South">South</option>
-              <option value="West">West</option>
-              <option value="East">East</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-             <label for="linkedIn">LinkedIn</label>
-             <input type="text" class="form-control" id="linkedIn" name="linkedInbox" placeholder="LinkedIn">
-          </div>  
-          <div class="form-group">
-            <label for="facebook">Facebook</label>
-            <input type="text" class="form-control" id="facebook" name="facebookbox" placeholder="Facebook">
-          </div>
-          <div class="form-group">
-            <label for="twitter">Twitter</label>
-            <input type="text" class="form-control" id="twitter" name="twitterbox" placeholder="Twitter">
-          </div>
-          <div class="form-group">
-            <label for="website">Personal Website</label>
-            <input type="text" class="form-control" id="website" name="websitebox" placeholder="Website">
-          </div>
-          <div class="form-group">
-            <label for="employer">Employer</label>
-            <input type="text" class="form-control" id="employer" name="employerbox" placeholder="Employer">
-          </div>
-
- 
-
-          <div class="form-group">
-            <!-- add styling wrapping here  -->
-            <!-- do we need to add class="form-control" to all inputs? -->
-            <!-- Make bio box height bigger -->
-            
-            <!-- TED - MAKE ALL VALUES = TRUE? -->
-            <label for="userSkills">Skills</label>
-            <br>
-
-            <input type="checkbox" id="skillsAccounting" name="skillsAccounting">
-            <label for="skillsAccounting"> Accounting</label><br>
-
-            <input type="checkbox" id="skillsEngineering" name="skillsEngineering">
-            <label for="skill2"> Engineering</label><br>
-
-            <input type="checkbox" id="skillsEventPlanning" name="skillsEventPlanning" value="skillsEventPlanning">
-            <label for="skill3"> Event Planning</label><br>
-
-            <input type="checkbox" id="skillsGraphicDesign" name="skillsGraphicDesign" value="skillsGraphicDesign">
-            <label for="skillsGraphicDesign"> Graphic Design</label><br>
-
-            <input type="checkbox" id="skillsPhotography" name="skillsPhotography" value="skillsPhotography">
-            <label for="skillsPhotography"> Photography</label><br>
-
-            <input type="checkbox" id="skillsProjectManagement" name="skillsProjectManagement" value="skillsProjectManagement">
-            <label for="skillsProjectManagement"> Project Management</label><br>
-            
-            <input type="checkbox" id="skillsWebDevelopment" name="skillsWebDevelopment" value="skillsWebDevelopment">
-            <label for="skillsWebDevelopment"> Web Development</label><br>
-
-            <input type="checkbox" id="skillsWriting" name="skillsWriting" value="skillsWriting">
-            <label for="skillsWriting"> Writing</label><br>
-            
-            <input type="checkbox" id="skillsGroceryPickup" name="skillsGroceryPickup" value="skillsGroceryPickup">
-            <label for="skillsGroceryPickup"> Grocery Pickup</label><br>
-            
-            <input type="checkbox" id="skillsHomeHealthcare" name="skillsHomeHealthcare" value="skillsHomeHealthcare">
-            <label for="skillsHomeHealthcare"> Home Healthcare</label><br>
-
-            <input type="checkbox" id="skillsFurnitureMoving" name="skillsFurnitureMoving" value="skillsFurnitureMoving">
-            <label for="skillsFurnitureMoving"> Furniture Removal and Moving</label><br>
-
-            <input type="checkbox" id="skillsLandscaping" name="skillsLandscaping" value="skillsLandscaping">
-            <label for="skillsLandscaping"> Landscaping</label><br>
-
-            <input type="checkbox" id="skillsPlumbing" name="skillsPlumbing" value="skillsPlumbing">
-            <label for="skillsPlumbing"> Plumbing</label><br>
-
-            <input type="checkbox" id="skillsGeneralRepair" name="skillsGeneralRepair" value="skillsGeneralRepair">
-            <label for="skillsGeneralRepair"> General Repair</label><br>
-
-            <input type="checkbox" id="skillsTransportation" name="skillsTransportation" value="skillsTransportation">
-            <label for="skillsTransportation"> Transportation</label><br>
-            <!-- future direction -->
-            <!-- <input type="checkbox" id="skill" name="skill" value="">
-            <label for="skill"> <input type="text" class="form-control" id="other-skill" placeholder="Other"></label> -->
-          </div>
-
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
-          </div>
-          
-          <div class="form-group">
-          <input type="checkbox" id="termsofuse" name="termsofuse" value="accepted">
-            <label for="termsofuse">I accept the  <a target=”_blank” href="terms.html">Terms of Use</a></label>
-          </div>
-
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-
-          <button type="submit" class="btn btn-default">Sign Up</button>
-
-        </form>
-
-        <br />
-        <p>Or log in <a href="login.html">here</a></p>
-
-      </div>
     </div>
   </div>
+</div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/signup.js"></script>
 
 </body>
 

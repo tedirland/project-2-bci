@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Posts</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <style>
+    .post {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 15px 15px 15px 15px;
+      width: 725px;
+      /* margin: auto; */
+      text-align: left;
+    }
+
+    div.allPosts {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="row top-30">
+
+      <div class="col-md-10 col-sm-2 bufferbutton1">
+        <a class="btn btn-default" href="/community">Browse Community</a>
+      </div>
+      <div class="col-md-1 col-sm-2 bufferbutton2">
+        <a class="btn btn-default" href="/posts">Browse Posts</a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row"></div>
+  <div class="col-md-10 col-md-offset-2 col-sm-1">
+    <h1>My Posts</h1>
+    <a class="btn btn-default col-md-offset-8" href="create-post.html">Create Post</a>
+    <br>
+    <br>
+    <div class="allPosts">
+      {{#each posts}}
+
+
+      <div class="post">
+        <div class="col-sm-2 col-md-6">
+          <p>{{this.dataValues.title}}</p>
+          <p>{{this.dataValues.content}}</p>
+          <p>Skills Needed:</p>
+          <p>Client ID: {{this.dataValues.ClientId}}</p>
+          <p>Volunteer ID: {{this.dataValues.volunteerID}}</p>
+         
+        </div>
+
+        <div class="col-sm-2 col-md-offset-2">
+          <a href="#" class="btn btn-info col-md-offset-11" id="trash">
+            <span class="glyphicon glyphicon-trash"></span>
+          </a>
+        </div>
+      </div>
+
+
+      {{/each}}
+    </div>
+  </div>
+</div>
+</div>

@@ -1,9 +1,4 @@
-<!-- list profiles -->
-<!-- look into profile card with CSS
-https://www.w3schools.com/howto/howto_css_column_cards.asp
-https://www.w3schools.com/howto/howto_css_team.asp -->
-<!-- https://www.w3schools.com/howto/howto_css_profile_card.asp -->
-<!-- https://www.bypeople.com/profile-card-hover-effect/ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +18,7 @@ https://www.w3schools.com/howto/howto_css_team.asp -->
   /* margin: auto; */
   text-align: left;
     }
-    div.allPosts {
+    div.allProjects-container {
   display: flex;  
   flex-wrap: wrap;
 }
@@ -35,55 +30,31 @@ https://www.w3schools.com/howto/howto_css_team.asp -->
       <div class="container-fluid">    
         <div class="row top-30">
           
-          <div class="col-md-10 col-sm-2">
+         <div class="col-md-10 col-sm-2 bufferbutton1">
             <a class="btn btn-default" href="browse-community.html">Browse Community</a>
           </div>
-          <div class="col-md-1 col-sm-2">
+          <div class="col-md-1 col-sm-2 bufferbutton2">
             <a class="btn btn-default" href="browse-posts.html">Browse Posts</a>
           </div>
-  
         </div>
       </div>
     </nav>
-	<!-- Add icon library -->
+  <!-- Add icon library -->
+  
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-2 col-sm-1">
         <h1>My Projects</h1>
         <br>
-        <div class="allPosts">
-          <div class="post">		
-            <div class="col-sm-2 col-md-6">
-              <p>Title:</p>
-              <p>Content:</p>
-              <p>Skills Needed:</p>
-              <p>Created On:</p>
-              <p>Member: <a>Name</a></p>   
-            </div>
-    
-            <div class="col-sm-2 col-md-offset-2">
-                <button type="submit">Complete!</button>
-            </div>          
-        </div>
-        <div class="post">		
-          <div class="col-sm-2 col-md-6">
-            <p>Title:</p>
-            <p>Content:</p>
-            <p>Skills Needed:</p>
-            <p>Created On:</p>
-            <p>Member: <a>Name</a></p>   
-          </div>
-  
-          <div class="col-sm-2 col-md-offset-2">
-              <button type="submit">Complete!</button>
-          </div>
-      </div>
+        
+        <div class="allProjects-container">
+
     </div>
     <br>
   </div>
 </div>
 
-<script src="js/browse-community.js" type="text/javascript"></script>
+<script src="js/my-projects.js" type="text/javascript"></script>
 
 </body>
 

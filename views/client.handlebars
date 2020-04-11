@@ -1,0 +1,74 @@
+<head>
+  <title>Community</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css"
+    integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg=="
+    crossorigin="anonymous">
+
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 10px 10px 10px 10px;
+      width: 400px;
+      height: 400px;
+  /* margin: auto; */
+  text-align: left;
+    }
+    div.allCards {
+  display: flex;  
+  flex-wrap: wrap;
+}
+    </style> 
+
+</head>
+
+ <nav class="navbar navbar-default">
+      <div class="container-fluid">    
+        <div class="row top-30">
+          <div class="col-md-1 col-sm-2 col-md-offset-0">
+
+            <a class="btn btn-default" href="/posts">Browse Posts</a>
+
+
+          </div>
+      </div>
+    </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-1">
+        <h1>Community</h1>
+      </div>
+          <div class="col-md-offset-9">
+            <a class="btn btn-default" id="viewAll">View All</a>
+          </div>
+        <br>
+      </div>
+
+    <div class="allCards">
+    
+           {{#each clients}}
+          <div class="card">
+            <img src="img.jpg" alt="John" style="width:50px; height 50px"><br>
+            <br>
+            <h6>{{this.dataValues.firstName}} {{this.dataValues.lastName}}</h6>
+            <br>
+            <p class="title">{{this.dataValues.bio}}</p>
+            <br>
+            <p>{{this.dataValues.employer}}</p>
+            <br>
+						<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+						<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+            <p><button>Contact</button></p>
+          </div>
+  {{/each}}
+
+
+  </div>
+</div>
+

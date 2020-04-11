@@ -2,15 +2,15 @@
 var db = require("../models");
 
 module.exports = function (app) {
-  // Find all clients and return them to the user with res.json
+  // Find all clients and return them to the user with res.json (served up at the browse community page)
   app.get("/api/clients", function (req, res) {
     db.Client.findAll({}).then(function (dbClient) {
       res.json(dbClient);
     });
   });
-
-  app.get("/api/clients/:id", function (req, res) {
-    // Find one Client with the id in req.params.id and return them to the user with res.json
+  
+ app.get("/api/clients/:id", function (req, res) {
+  
     db.Client.findOne({
       where: {
         id: req.params.id
@@ -19,6 +19,13 @@ module.exports = function (app) {
       res.json(dbClient);
     });
   });
+
+app.post("/api/clients", function (req, res) {
+  console.log(req.body)
+  db.Client.create(req.body).then(function (dbClient) {
+    res.json(dbClient)
+  });
+});
 
   app.post("/api/clients", function (req, res) {
     console.log(req.body)
@@ -44,15 +51,13 @@ module.exports = function (app) {
       skillsWriting: req.body.skillsWriting,
       skillsGroceryPickup: req.body.skillsGroceryPickup,
       skillsHomeHealthcare: req.body.skillsHomeHealthcare,
-      skillsFurnitureMoving: req.body,skillsFurnitureMoving,
+      skillsFurnitureMoving: req.body.skillsFurnitureMoving,
       skillsLandscaping: req.body.skillsLandscaping,
       skillsPlumbing: req.body.skillsPlumbing,
       skillsGeneralRepair: req.body.skillsGeneralRepair,
       skillsTransportation: req.body.skillsTransportation
     })
     .then(function (dbClient) {
-
-
     });
   });
 

@@ -6,134 +6,136 @@ $(document).ready(function() {
   var lastName = $("input#lastName");
   var password = $("input#password");
   var bio = $("input#bio");
-  var location = $("option#location");
+  var location = $("select#location");
   var linkedIn = $("input#linkedIn");
   var facebook = $("input#facebook");
   var website = $("input#website");
   var employer = $("input#employer");
   var twitter = $("input#twitter");
-  var skillsAccounting = $("input#skillsAccounting");
-  var skillsEngineering = $("input#skillsEngineering");
-  var skillsEventPlanning = $("input#skillsEventPlanning");
-  var skillsGraphicDesign = $("input#skillsGraphicDesign");
-  var skillsPhotography = $("input#skillsPhotography");
-  var skillsProjectManagement = $("input#skillsProjectManagement");
-  var skillsWebDevelopment = $("input#skillsWebDevelopment");
-  var skillsWriting = $("input#skillsWriting");
-  var skillsGroceryPickup = $("input#skillsGroceryPickup");
-  var skillsHomeHealthcare = $("input#skillsHomeHealthcare");
-  var skillsFurnitureMoving = $("input#skillsFurnitureMoving");
-  var skillsLandscaping = $("input#skillsLandscaping");
-  var skillsPlumbing = $("input#skillsPlumbing");
-  var skillsGeneralRepair = $("input#skillsGeneralRepair");
-  var skillsTransportation = $("input#skillsTransportation");
-  var termsofuse = $("input#termsofuse").val().trim();
-  var radioVolunteer = $("#radioVolunteer").val();
-  var radioMember = $("#radioMember").val();
+  var skillsAccounting = $("input#skillsAccounting")[0];
+  var skillsEngineering = $("input#skillsEngineering")[0];
+  var skillsEventPlanning = $("input#skillsEventPlanning")[0];
+  var skillsGraphicDesign = $("input#skillsGraphicDesign")[0];
+  var skillsPhotography = $("input#skillsPhotography")[0];
+  var skillsProjectManagement = $("input#skillsProjectManagement")[0];
+  var skillsWebDevelopment = $("input#skillsWebDevelopment")[0];
+  var skillsWriting = $("input#skillsWriting")[0];
+  var skillsGroceryPickup = $("input#skillsGroceryPickup")[0];
+  var skillsHomeHealthcare = $("input#skillsHomeHealthcare")[0];
+  var skillsFurnitureMoving = $("input#skillsFurnitureMoving")[0];
+  var skillsLandscaping = $("input#skillsLandscaping")[0];
+  var skillsPlumbing = $("input#skillsPlumbing")[0];
+  var skillsGeneralRepair = $("input#skillsGeneralRepair")[0];
+  var skillsTransportation = $("input#skillsTransportation")[0];
+  var termsofuse = $("input#termsofuse")[0];
+  var volunteer = $("input#radioVolunteer")[0];
+  var member = $("input#radioMember")[0];
 
-  function check() {
-    if (radioVolunteer.checked = "on"
-  }
-  console.log(termsofuse);
-  console.log(radioVolunteer);
-  console.log(radioMember);
-
-//   if skillsAccounting.checked
-//   //  function check() {
-
-// // radiobtn.checked = true;
-
-//   radiobtn.checked = true
-//   can we just set the val or need function? 
-//  function check() {
-//   document.getElementById("red");
-// }
-// function uncheck() {
-//   document.getElementById("red").checked = false;
-// }
-// });
-
-//   $("input[name='radio']").click(function() {
-//     $('input#bio').text('Volunteer Bio');
-//     $('input#userSkills').text('Skills to Volunteer');
-
-//     if(this.checked){
-//      $(this).next().text('Member Bio');
-//      $(this).next().text('Skills Required for Projects');
-
-//     }
-// });
-  //need to add type, and more for enforced things, 
-//when empty, pop out message for error, missing categories
-//toggle for bio or for projects interest + add volunteer or member to words that say bio 
-
-
-  // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("submit", function(event) {
-    event.preventDefault();
-    var userData = {
-      email: email.val().trim(),
-      password: password.val().trim(),
-      firstName: firstName.val().trim(),
-      lastName: lastName.val().trim(),
-      bio: bio.val().trim(),
-      location: location.val(),
-      linkedIn: linkedIn.val().trim(),
-      facebook: facebook.val().trim(),
-      website: website.val().trim(),
-      employer: employer.val().trim(),
-      twitter: twitter.val().trim(),
-      skillsAccounting: skillsAccounting.val().trim(),
-      skillsEngineering: skillsEngineering.val().trim(),
-      skillsEventPlanning: skillsEventPlanning.val().trim(),
-      skillsGraphicDesign: skillsGraphicDesign.val().trim(),
-      skillsPhotography: skillsPhotography.val().trim(),
-      skillsProjectManagement: skillsProjectManagement.val().trim(),
-      skillsWebDevelopment: skillsWebDevelopment.val().trim(),
-      skillsWriting: skillsWriting.val().trim(),
-      skillsGroceryPickup: skillsGroceryPickup.val().trim(),
-      skillsHomeHealthcare: skillsHomeHealthcare.val().trim(),
-      skillsFurnitureMoving: skillsFurnitureMoving.val().trim(),
-      skillsLandscaping: skillsLandscaping.val().trim(),
-      skillsPlumbing: skillsPlumbing.val().trim(),
-      skillsGeneralRepair: skillsGeneralRepair.val().trim(),
-      skillsTransportation: skillsTransportation.val().trim(),
-    };
-
-console.log(userData)
-
-
-
-    if (!userData.email || !userData.password || !userData.termsofuse || !userData.location) {
-      return;
+  //change form based on member or volunteer signing up
+  $('input[type=radio]').on("change", function() {
+    if ($(this).val() == "volunteer") {
+      $('#skills-list').show();
+    } else {
+      $('#skills-list').hide();
+      //reset the values of checked boxes (so that members don't have skills)
     }
-    // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
-    emailInput.val("");
-    passwordInput.val("");
-  });
+});
 
+signUpForm.on("submit", function(event) {
+  event.preventDefault();
+  var userData = {
+    email: email.val().trim(),
+    password: password.val().trim(),
+    firstName: firstName.val().trim(),
+    lastName: lastName.val().trim(),
+    bio: bio.val().trim(),
+    location: location.val(),
+    linkedIn: linkedIn.val().trim(),
+    facebook: facebook.val().trim(),
+    website: website.val().trim(),
+    employer: employer.val().trim(),
+    twitter: twitter.val().trim(),
+    skillsAccounting: skillsAccounting.checked,
+    skillsEngineering: skillsEngineering.checked,
+    skillsEventPlanning: skillsEventPlanning.checked,
+    skillsGraphicDesign: skillsGraphicDesign.checked,
+    skillsPhotography: skillsPhotography.checked,
+    skillsProjectManagement: skillsProjectManagement.checked,
+    skillsWebDevelopment: skillsWebDevelopment.checked,
+    skillsWriting: skillsWriting.checked,
+    skillsGroceryPickup: skillsGroceryPickup.checked,
+    skillsHomeHealthcare: skillsHomeHealthcare.checked,
+    skillsFurnitureMoving: skillsFurnitureMoving.checked,
+    skillsLandscaping: skillsLandscaping.checked,
+    skillsPlumbing: skillsPlumbing.checked,
+    skillsGeneralRepair: skillsGeneralRepair.checked,
+    skillsTransportation: skillsTransportation.checked,
+  };
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
-  //add if here for type!
-  // Otherwise we log any errors
+  if (!userData.firstName || !userData.lastName || !userData.email || !userData.password || !userData.location ||!userData.bio || (!volunteer.checked && !member.checked) || !termsofuse.checked) {
+    alert("Please fill out all starred fields.");
+    //try to reload here or refresh the page. Maybe reset the obj also?
+    return;
+  } 
+  // If we have the above fields not empty, run the needed User function for a client or volunteer
+        if (volunteer.checked) {
+          console.log(userData);
+          signUpVolunteerUser(userData);
+        } else {
+          signUpClientUser(userData);
+        }
+        // resetObj();
+});
 
-
-  function signUpUser(email, password) {
-    $.post("/api/clientsignup", {
-      email: email,
-      password: password
+function signUpVolunteerUser(userData) {
+  console.log(userData);
+  $.post("/api/volunteers", userData)
+    .then(function(data) {
+      window.location.replace("/myProjects");
+      // If there's an error, handle it by throwing up a bootstrap alert
     })
-      .then(function(data) {
+    .catch(handleLoginErr);
+}
 
-        window.location.replace("/myPosts");
-        // If there's an error, handle it by throwing up a bootstrap alert
-      })
-      .catch(handleLoginErr);
-  }
+function signUpClientUser(userData) {
+  $.post("/api/clients", userData)
+    .then(function(data) {
+      window.location.replace("/myPosts");
+      // If there's an error, handle it by throwing up a bootstrap alert
+    })
+    .catch(handleLoginErr);
+}
+function handleLoginErr(err) {
+  $("#alert .msg").text(err.responseJSON);
+  $("#alert").fadeIn(500);
+}
 
-  function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
-  }
+function resetObj(){
+  email.val("");
+  password.val("");
+  firstName.val("");
+  lastName.val("");
+  bio.val("");
+  location.val("");
+  linkedIn.val("");
+  facebook.val("");
+  website.val("");
+  employer.val("");
+  twitter.val("");
+  skillsAccounting.checked = false;
+  skillsEngineering.checked = false;
+  skillsEventPlanning.checked = false;
+  skillsGraphicDesign.checked = false;
+  skillsPhotography.checked = false;
+  skillsProjectManagement.checked = false;
+  skillsWebDevelopment.checked = false;
+  skillsWriting.checked = false;
+  skillsGroceryPickup.checked = false;
+  skillsHomeHealthcare.checked = false;
+  skillsFurnitureMoving.checked = false;
+  skillsLandscaping.checked = false;
+  skillsPlumbing.checked = false;
+  skillsGeneralRepair.checked = false;
+  skillsTransportation.checked = false;
+}
 });

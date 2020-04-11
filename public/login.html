@@ -5,48 +5,80 @@
   <title>Login</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+  <style> 
+  #showMember{
+	display: none;
+  }
+  .container{
+	align-content: center;
+  }
+  </style>
 </head>
 
   <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-          </div>
-        </div>
-      </nav>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <h2>Login Form</h2>
-            <form class="login">
-<!-- same line -->
-              <div class="form-group">
-               <input type="radio" id="radioVolunteer" name ="selectType">
-                <label for="radioVolunteer"> Volunteer</label><br>
-                <input type="radio" id="radioMember" name ="selectType">
-                <label for="radioMember"> Member</label><br>
-          </div>
+    <div class="col-md-offset-4 login-container">
+		<div class="selectRadioType">
+			<input type="radio" id="radioVolunteer" name ="selectType" class="logRadio" value="volunteer" checked>
+			 <label for="radioVolunteer">Volunteer</label><br>
+			 <input type="radio" id="radioMember" name ="selectType" class="logRadio" value="member">
+			 <label for="radioMember">Member</label><br>
+	   </div>
+	    <div class="row">
+		
+        <div class="col-md-6 login-form-1" id="showVolunteer">
+			
+      <h3>Login for Volunteer</h3>
+			<form id="volunteerForm">
+				
+				<div class="form-group">
+					<input type="email" class="form-control" id="email" placeholder="Your Email">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" id="password" placeholder="Your Password"/>
+				</div>
+				<div class="form-group">
+					<input type="submit"  id="volunteer" class="btnSubmit" value="Login" />
+				</div>
+				<div class="form-group">
+					<a href="#" class="ForgetPwd">Forget Password?</a>
+				</div>
+				<div class="form-group">
+					<a href="signup.html" class="signup">Sign Up Here!</a>
+				</div>
 
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password">
-              </div>
+			</form>
+		</div>
 
-              <!-- on click this will be authenticated and go to browse-posts -->
-              <button type="submit" class="btn btn-default">Login</button>
+		<div class="col-md-6 login-form-2" id="showMember">
+			<h3>Login for Member</h3>
+			<form id="memberForm">
+				<div class="form-group">
+					<input type="text" class="form-control" id="email2" placeholder="Your Email"/>
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" id="password2" placeholder="Your Password"/>
+				</div>
+				<div class="form-group">
+					<input type="submit"  id="member"  class="btnSubmit" value="Login" />
+				</div>
+				<div class="form-group">
 
-            </form>
-            <br />
-            <p>Or sign up <a href="signup.html">here</a></p>
-          </div>
-        </div>
-      </div>
+					<a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+				</div>
+				<a href="signup.html" class="ForgetPwd" value="Login">Sign Up Here!</a>
+			</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
 

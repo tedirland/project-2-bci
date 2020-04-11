@@ -3,3 +3,133 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+/*Background color for all pages(DO NOT CHANGE PLS)*/
+body{
+  background-color: rgba(221, 217, 217, 0.589) ;
+}
+/*Containers for browse post page*/
+.container {
+  padding: 5px 5px 5px 5px;
+  border: 1px solid #E6E8EB;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-group button {
+background-color: rgb(48, 194, 85); /* Green background */
+border: 1px solid green; /* Green border */
+color: white; /* White text */
+padding: 10px 24px; /* Some padding */
+cursor: pointer; /* Pointer/hand icon */
+width: 100%; /* Set a width if needed */
+display: block; /* Make the buttons appear below each other */
+}
+
+.bufferbutton1{
+  margin-top: 5px;
+  margin-left: 35px;
+}
+.bufferbutton2{
+  margin-top: 5px;
+}
+
+
+
+/*User Info Cards*/
+.nav-custom{
+  background-color: black;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 3px;
+  text-align: center;
+  font-family: arial;
+  flex-direction: row;
+  float: left;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title {
+  color: rgb(121, 121, 121);
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 5px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+/*Login*/
+.login-container{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.login-form-1{
+  padding: 7%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+  text-align: center;
+  color: #333;
+}
+.login-form-2{
+  padding: 5%;
+  background: #0062cc;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+  text-align: center;
+  color: #fff;
+}
+.login-container form{
+  padding: 10%;
+}
+.btnSubmit
+{
+  width: 50%;
+  border-radius: 1rem;
+  padding: 1.5%;
+  border: none;
+  cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+  font-weight: 600;
+  color: #fff;
+  background-color: #0062cc;
+}
+.login-form-2 .btnSubmit{
+  font-weight: 600;
+  color: #0062cc;
+  background-color: #fff;
+}
+.login-form-2 .ForgetPwd{
+  color: #fff;
+  font-weight: 300;
+  text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+  color: #0062cc;
+  font-weight: 300;
+  text-decoration: none;
+}
+.form-group{
+  font-size: medium;
+  font-weight: 400;
+}
